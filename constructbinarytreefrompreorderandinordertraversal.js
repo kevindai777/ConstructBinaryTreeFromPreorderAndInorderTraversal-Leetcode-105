@@ -50,6 +50,6 @@ function dfs(preorder, inorder) {
     return root
 }
 
-console.log(dfs(preorder, inorder))
+return dfs(preorder, inorder)
 
 
