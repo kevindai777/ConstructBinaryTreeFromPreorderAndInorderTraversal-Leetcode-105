@@ -32,7 +32,7 @@ class Tree {
 
 
 //O(n) solution that recursively builds the left and right part of the root of the
-//binary tree via where the root is in the inorder array.
+//binary tree by finding where the root is indexed in the inorder array.
 function dfs(preorder, inorder) {
     if (!inorder || inorder.length < 1) {
         return null
@@ -44,6 +44,7 @@ function dfs(preorder, inorder) {
     let leftside = inorder.slice(0, index)
     let rightside = inorder.slice(index + 1)
 
+    //Recursively build left and right sides of tree
     root.left = dfs(preorder, leftside)
     root.right = dfs(preorder, rightside)
 
